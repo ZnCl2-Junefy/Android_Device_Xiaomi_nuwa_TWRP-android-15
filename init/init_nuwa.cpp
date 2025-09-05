@@ -79,12 +79,13 @@ void model_property_override(const std::string& device, const std::string& name,
 void vendor_load_properties() {
 	property_override("ro.bootimage.build.date.utc", "1756196800");
 	property_override("ro.build.date.utc", "1756196800");
+
 	const std::string sku = GetProperty("ro.boot.hardware.sku", "");
 	const std::string hwversion = GetProperty("ro.boot.hwversion", "");
-}
 
 	if (sku == "nuwa") {
 		model_property_override("nuwa", "nuwa", "Xiaomi 13 Pro");
 	} else {
-		model_property_override("unknow", "unknow", "unknow name");
+		model_property_override("unknown", "unknown", "Unknown device");
 	}
+}
