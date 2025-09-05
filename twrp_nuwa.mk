@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/xiaomi/fuxi
+DEVICE_PATH := device/xiaomi/nuwa
 
 # Inherit from device.mk configuration
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
@@ -23,7 +23,7 @@ $(call inherit-product, $(DEVICE_PATH)/device.mk)
 PRODUCT_RELEASE_NAME := nuwa
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := fuxi
+PRODUCT_DEVICE := nuwa
 PRODUCT_NAME := twrp_nuwa
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Xiaomi 13 Pro
