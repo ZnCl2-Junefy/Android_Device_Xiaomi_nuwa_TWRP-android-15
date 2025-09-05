@@ -77,8 +77,8 @@ void model_property_override(const std::string& device, const std::string& name,
 }
 
 void vendor_load_properties() {
-	property_override("ro.bootimage.build.date.utc", "1640966400");
-	property_override("ro.build.date.utc", "1640966400");
+	property_override("ro.bootimage.build.date.utc", "1756196800");
+	property_override("ro.build.date.utc", "1756196800");
 	const std::string sku = GetProperty("ro.boot.hardware.sku", "");
 	const std::string hwversion = GetProperty("ro.boot.hwversion", "");
 
