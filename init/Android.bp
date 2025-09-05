@@ -1,0 +1,33 @@
+bootstrap_go_package {
+    name: "soong-libinit_nuwa_defaults",
+    pkgPath: "device/xiaomi/nuwa/init/init_nuwa",
+    deps: [
+        "soong",
+        "soong-android",
+        "soong-cc"
+    ],
+    srcs: [
+        "libinit_nuwa_defaults.go",
+    ],
+    pluginFor: ["soong_build"]
+}
+
+libinit_nuwa_defaults {
+    name: "libinit_nuwa_defaults"
+}
+
+cc_library_static {
+    name: "libinit_nuwa",
+    defaults: ["libinit_nuwa_defaults"],
+    header_libs: [
+        "libbase_headers",
+    ],
+    cflags: [
+        "-Wall",
+    ],
+    static_libs: [
+        "libbase",
+    ],
+    srcs: ["init_nuwa.cpp"],
+    recovery_available: true,
+}
